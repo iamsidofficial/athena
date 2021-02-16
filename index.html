@@ -1,49 +1,71 @@
-<html lang="en">
+<!doctype html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lora:ital@1&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Athena</title>
+  <meta name="keywords" content="css3, html5, js, background video, fullscreen video">
+  <meta name="description" content="Super easy to implement HTML5 fullscreen background video library in JavaScript.">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Lora:ital@1&display=swap" rel="stylesheet">
 
-    <title>Athena - Random Quotes Generator</title>
+
+  <script src="https://use.typekit.net/nlq1kdt.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body>
-    <div class="app">
+  <div id="container">
+    <video id="background_video" loop muted></video>
+    <div id="video_cover"></div>
+    <div id="overlay"></div>
+
+    <!-- <div id="video_controls">
+      <span id="play">
+        <img src="play.png">
+      </span>
+      <span id="pause">
+        <img src="pause.png">
+      </span> -->
+    </div>
+
+    <section id="main_content">
+      <div id="head">
+        <h1 id="header">Athena</h1>
+        <p class="sub_head"> A random quotes generator</p>
         
-        <header>
-          <div class="head">
-            Athena
-          </div>
-          <div class="desc">
-            A random quotes generator
-          </div>
-        </header>
-        <section class="quotes">
-          <div class="quote-text" id="js-quote-text"></div>
-    
-          <div class="quote-text quote-author" id="js-quote-author"></div>
-        </section>
-        <div id="js-spinner" class="spinner hidden">
-          <div class="rect1"></div>
-          <div class="rect2"></div>
-          <div class="rect3"></div>
-          <div class="rect4"></div>
-          <div class="rect5"></div>
-        </div>
-        <section class="controls">
-          <button type="button" id="js-new-quote" class="new-quote button">
-            Get a new quote
-          </button>
-        </section>
-
-
       </div>
 
+      <section class="quotes">
+        <div class="quote-text" id="js-quote-text"></div>
+  
+        <div class="quote-text quote-author" id="js-quote-author"></div>
+      </section>
 
-      <script src="script.js"></script>
-    <script src="https://platform.oswaldlabs.com/v1/agastya/load/athena-104c6.js" async defer></script>
+      <div id="js-spinner" class="spinner hidden">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+      </div>
+      <section class="controls">
+        <button type="button" id="js-new-quote" class="new-quote button">
+          Get a new quote
+        </button>
+      </section>
+    </section>
+  </div>
+
+  
+
+  <script src="bideo.js"></script>
+  <script src="main.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    if (window.location.host.indexOf('github.io') !== -1 && window.location.protocol !== "https:") {
+      window.location.protocol = "https";
+    }
+  </script>
 </body>
 </html>

@@ -48,5 +48,3 @@ function displayAuthor(author) {
 const endpoint = 'https://api.quotable.io/random';
 
 getQuote();
-
-
